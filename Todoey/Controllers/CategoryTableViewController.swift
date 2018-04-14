@@ -17,6 +17,8 @@ class CategoryTableViewController: UITableViewController {
     
     var categories = [Category]()
     
+    /////
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext // create an object of AppDelegate and accessing objects
     
     override func viewDidLoad() {
