@@ -18,7 +18,7 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))// Directory of the file created
+        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))// Directory of the file created
         
         loadCategories()
         

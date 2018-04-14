@@ -12,6 +12,7 @@
 		2F0DE625207E1FC000ACFD29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0DE623207E1FC000ACFD29 /* Main.storyboard */; };
 		2F0DE627207E1FC000ACFD29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F0DE626207E1FC000ACFD29 /* Assets.xcassets */; };
 		2F0DE62A207E1FC000ACFD29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0DE628207E1FC000ACFD29 /* LaunchScreen.storyboard */; };
+		2F4182B32081E3B900F0C25E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4182B22081E3B900F0C25E /* Data.swift */; };
 		2FDEACFB207FA04E00363F3F /* DaraModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FDEACF9207FA04E00363F3F /* DaraModel.xcdatamodeld */; };
 		2FFD5C6C2080BC9B00BD76A1 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFD5C6B2080BC9B00BD76A1 /* CategoryTableViewController.swift */; };
 		3A53E7AA295102A5A5157FD0 /* Pods_Todoey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15E6DD18AF66E29A5EFC4E8 /* Pods_Todoey.framework */; };
@@ -25,6 +26,7 @@
 		2F0DE626207E1FC000ACFD29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F0DE629207E1FC000ACFD29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F0DE62B207E1FC000ACFD29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F4182B22081E3B900F0C25E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2FDEACFA207FA04E00363F3F /* DaraModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DaraModel.xcdatamodel; sourceTree = "<group>"; };
 		2FFD5C6B2080BC9B00BD76A1 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryTableViewController.swift; path = Todoey/Controllers/CategoryTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		98B8886FD46A39E4DFD86EF5 /* Pods-Todoey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todoey/Pods-Todoey.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				2FDEACF9207FA04E00363F3F /* DaraModel.xcdatamodeld */,
+				2F4182B22081E3B900F0C25E /* Data.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0DE622207E1FC000ACFD29 /* TodoListViewController.swift in Sources */,
+				2F4182B32081E3B900F0C25E /* Data.swift in Sources */,
 				2F0DE620207E1FC000ACFD29 /* AppDelegate.swift in Sources */,
 				2FDEACFB207FA04E00363F3F /* DaraModel.xcdatamodeld in Sources */,
 				2FFD5C6C2080BC9B00BD76A1 /* CategoryTableViewController.swift in Sources */,
@@ -391,7 +395,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX8B7663C6;
 				INFOPLIST_FILE = Todoey/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = waiig.com.Todoey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -407,7 +414,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX8B7663C6;
 				INFOPLIST_FILE = Todoey/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = waiig.com.Todoey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
