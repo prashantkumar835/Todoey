@@ -7,9 +7,13 @@
 //
 
 import UIKit
-import CoreData
+//import CoreData
+import RealmSwift
 
 class CategoryTableViewController: UITableViewController {
+    
+    let realm = try! Realm()
+    
     
     var categories = [Category]()
     
@@ -72,9 +76,11 @@ class CategoryTableViewController: UITableViewController {
     //MARK: - Data Manipulation Mathods
     
     // TO SAVE THE DATA
-    func saveCategories() {
+    func save(category: Category) {
         do {
-            try context.save()
+            try realm.write {
+                realm.add(category)
+            }
         }catch {
             print("Error encoder item array, \(error)")
         }
@@ -83,14 +89,14 @@ class CategoryTableViewController: UITableViewController {
     
     // TO RETRIVE THE DATA
     
-    func loadCategories(with request: NSFetchRequest<Category> = Category.fetchRequest()) {
-        do {
-            categories = try context.fetch(request)
-        } catch {
-            print("Error fatching data from context \(error)")
-        }
-        
-        tableView.reloadData()
+    func loadCategories() {
+//        do {
+//            categories = try context.fetch(request)
+//        } catch {
+//            print("Error fatching data from context \(error)")
+//        }
+//
+//        tableView.reloadData()
     }
     
     
@@ -111,12 +117,12 @@ class CategoryTableViewController: UITableViewController {
         let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
             //what will happen once the user clicks the Add Item button on our UIAlert
             
-            let newCategory = Category(context: self.context)
+            let newCategory = Category()
             newCategory.name = textField.text!
             
             self.categories.append(newCategory)
             
-            self.saveCategories()
+            self.save(category: newCategory)
         
     }
     
