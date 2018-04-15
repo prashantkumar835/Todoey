@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import CoreData
 import RealmSwift
 
 class CategoryTableViewController: UITableViewController {
@@ -54,9 +53,6 @@ class CategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToItems", sender: self)
         
-        //saveCategories()
-        
-        //tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,9 +86,7 @@ class CategoryTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
-    
-    
-    
+
     
     //Mark: - Add New Categories
     
@@ -113,10 +107,7 @@ class CategoryTableViewController: UITableViewController {
             newCategory.name = textField.text!
             
             self.save(category: newCategory)
-        
     }
-    
-        
         alert.addAction(action)
         
         alert.addTextField { (field) in
@@ -125,10 +116,7 @@ class CategoryTableViewController: UITableViewController {
             
         }
         
-        
         present(alert, animated: true, completion: nil)
     }
-    
-    
     
 }

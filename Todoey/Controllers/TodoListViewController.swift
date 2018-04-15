@@ -87,7 +87,7 @@ class TodoListViewController: UITableViewController {
                     try self.realm.write {
                         let newItem = Item()
                         newItem.title = textField.text!
-                        newItem.dataCreated = Data()
+                        newItem.dateCreated = Date()
                         currentCategory.items.append(newItem)
                     }
                 }catch {
@@ -110,17 +110,6 @@ class TodoListViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
         
     }
-    //MaRK: - Model Manupulation Methods
-    // TO SAVE THE DATA
-    //    func saveItems() {
-    //
-    //        do {
-    //            try context.save()
-    //        }catch {
-    //            print("Error encoder item array, \(error)")
-    //        }
-    //        self.tableView.reloadData() // to reload the data in array
-    //    }
     
     // TO RETRIVE THE DATA
     
@@ -148,7 +137,6 @@ extension TodoListViewController: UISearchBarDelegate {
         tableView.reloadData()
         
     }
-    
     
     //to update list according to the search bar text
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
